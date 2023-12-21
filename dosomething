@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # 指定 image
-IMAGE="php:cli-bookworm"
+IMAGE=php:cli-bookworm
 
 # 要查找的路徑
-LOOKINGPATH="/home/kawa/job/for_test/test_data/www/admin/wjinc/admin/member"
+LOOKINGPATH=/home/kawa/job/for_test/test_data/www/admin/wjinc/admin/member
 
 # 專案中的 src 位置
-REPOSRC="/home/kawa/personal/php/for_job/src"
+REPOSRC=`pwd`/src
 
 docker run --rm -it \
     -w /app/src \
