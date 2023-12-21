@@ -15,31 +15,8 @@ require "./helpler.php";
  */
 $chinese_to_code = "./data/chinese_to_code.php";
 
-/**
- * return [
- *     "multilingual_000001" => "關閉",
- *     "multilingual_000002" => "錯誤訊息",
- *     "multilingual_000003" => "棄用",
- *     "multilingual_000004" => "注意",
- *     "multilingual_000005" => "警告",
- *     "multilingual_000006" => "嚴格",
- *     "multilingual_000007" => "同步",
- *     "multilingual_000008" => "失敗",
- *     "multilingual_000009" => "非同步",
- *      ......
- */
-$code_to_chinese = "./data/code_to_chinese.php";
-
 // 要搜尋的目錄路徑
 $searchPath = '../waiting_process';
-
-// load code_to_chinese.php
-if (is_readable($code_to_chinese)) {
-    $code_to_chinese_array = require $code_to_chinese;
-} else {
-    echo "沒讀到 code_to_chinese";
-    return;
-}
 
 // load chinese_to_code.php
 if (is_readable($chinese_to_code)) {
