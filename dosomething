@@ -9,5 +9,5 @@ LOOKINGPATH="/home/kawa/job/for_test/test_data/www/admin/wjinc/admin/member"
 docker run --rm -it \
     -w /app/src \
     -v /home/kawa/personal/php/for_job/src:/app/src \
-    -v $LOOKINGPATH:/app/src/waiting_process \
+    -v $LOOKINGPATH:/app/waiting_process \
     $IMAGE $@

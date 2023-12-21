@@ -31,7 +31,7 @@ $chinese_to_code = "./data/chinese_to_code.php";
 $code_to_chinese = "./data/code_to_chinese.php";
 
 // 要搜尋的目錄路徑
-$searchPath = './waiting_process';
+$searchPath = '../waiting_process';
 
 // load code_to_chinese.php
 if (is_readable($code_to_chinese)) {
