@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# 指定 image
+IMAGE="php:cli-bookworm"
+
+# 要查找的路徑
+LOOKINGPATH="/home/kawa/job/for_test/test_data/www/admin/wjinc/admin/member"
+
+docker run --rm -it \
+    -w /app/src \
+    -v /home/kawa/personal/php/for_job/src:/app/src \
+    -v $LOOKINGPATH:/app/src/waiting_process \
+    $IMAGE $@
