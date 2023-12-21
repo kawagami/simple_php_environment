@@ -49,13 +49,9 @@ if (is_readable($chinese_to_code)) {
     return;
 }
 
-// 呼叫搜尋函式，傳入中文對應的陣列
+// 第一次，以較長的 key 為優先
+searchFilesForChineseLonger($searchPath, $chinese_to_code_array);
+// 處理第二次，有 key 就替換
 searchFilesForChinese($searchPath, $chinese_to_code_array);
 
-echo "完成中文對應替換！";
-
-// print_r($chinese_to_code_array);
-// echo count($code_to_chinese_array);
-// echo "\n";
-// echo count($chinese_to_code_array);
-// echo "\n";
+echo "完成中文對應替換！\n";
